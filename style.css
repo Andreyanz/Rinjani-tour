@@ -1,0 +1,995 @@
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+    
+    :root{
+        --bg-utama: #FBF8F3;          
+        --bg-kartu: #FFFFFF;          
+        --bg-overlay: rgba(24, 34, 32, 0.55); 
+        
+        /* Warna Identitas & Aksen */
+        --warna-primer: #1D2B28;      
+        --warna-sekunder: #3E7B77;    
+        --warna-aksen: #D97736;       
+        --warna-aksen-hover: #B85E24; 
+        
+        /* Warna Teks */
+        --teks-utama: #1C1917;        
+        --teks-redup: #57534E;        
+        --teks-di-atas-foto: #FBF8F3; 
+        
+        
+        /* Variabel Ukuran & Jarak */
+        --ukuran-judul: 2rem;
+        --jarak-standar: 16px;
+        --radius-sudut: 8px;
+        
+        /* Variabel Font */
+        --font-utama: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    
+    
+    body{
+        font-family: 'literata' sans-serif;
+        background-color: var(--warna-primer);
+    }
+    
+    .navbar-contain{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        height: 70px;
+        padding: 0 10rem;
+        background-color: var(--warna-primer)
+    }
+    
+    .nav-img span{
+        color: white;
+        font-size: 1.7rem;
+        color: #F3E5AB;
+        letter-spacing: 1px;
+        font-weight: 600;
+    }
+    
+    .nav-link{
+        display: flex;
+        justify-content: space-between;
+        gap: 2rem;
+        color: var(--teks-di-atas-foto);
+    }
+    
+    ul{
+        list-style: none;
+    }
+    li{
+        cursor: pointer;
+    }
+    
+    .nav-search{
+        color: var(--teks-di-atas-foto);
+    }
+    
+    .nav-media{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1.2rem;
+        color: var(--teks-di-atas-foto);
+    }
+    
+    .nav-link{
+        font-size: 0.9rem;
+        font-weight: 500;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    
+    .nav-link li:hover{
+        color: var(--warna-aksen);
+    }
+    
+    .nav-media li:hover{
+        color: var(--warna-aksen);
+    }
+    
+    .hero-contain{
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 90vh;
+        justify-content: center;
+        background-image: url(asset/img/pexels-daneswara-eka-2157956675-38262928.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    
+    .hero-title{
+        font-size: 2.3rem;    
+        font-family: 'Impact';
+        font-weight: 100;
+        color: #F3E5AB;
+        margin-top: 1.8rem;
+    }
+    
+    .hero-title-down{
+        font-size: 2rem;
+        color: #F3E5AB;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        font-weight: 100;
+        margin-bottom: 2rem;
+    }
+    
+    .hero-btn button{
+        padding: 1rem 1.5rem;
+        border-radius: 15px;
+        font-size: 15px;
+        font-weight: 600;
+        background-color: var(--warna-aksen);
+        color: var(--teks-di-atas-foto);
+        transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    }
+    
+    .hero-btn button:hover{
+        background-color: var(--warna-aksen-hover);
+        transform: translateY(-1px);
+        cursor: pointer;
+    }
+    
+    /* about */
+    .about-containe {
+        width: 100%;
+        background-color: var(--warna-primer);
+        display: flex;
+        align-items: center; 
+        padding: 3rem 5rem;
+        gap: 2.5rem;
+        box-sizing: border-box; 
+    }
+    
+    /* Kolom Kiri */
+    .about-containe-left {
+        flex: 1; 
+        min-width: 0;
+    }
+    
+    .about-containe-2-img,
+    .about-containe-2-img img {
+        width: 100%;
+        height: 100%;
+        max-height: 650px;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 4px;
+        display: block;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.9), 
+        0 0 20px rgba(226, 232, 240, 0.12);
+    }
+    
+    /*  Kolom Kanan  */
+    .about-containe-right {
+        flex: 1.2; 
+        min-width: 0; 
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: space-between;
+        gap: 1.5rem;
+    }
+    
+    .about-containe-right-title h2 {
+        color: #F3E5AB;
+        font-size: clamp(2.5rem, 4vw, 4.5rem); 
+        letter-spacing: 2px;
+        line-height: 1.1;
+        margin: 0;
+        word-wrap: break-word;
+        padding: 0 1rem 0 1rem;
+    }
+    
+    .about-containe-2-right-paragraph p {
+        color: #F3E5AB; 
+        font-size: 0.9rem;
+        line-height: 1.6;
+        margin: 0;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: 300;
+        padding: 0 1rem 0 1rem;
+        text-align: justify;
+    }
+    
+    
+    /* Dua Gambar Bawah */
+    .about-containe-2-right-img {
+        display: flex;
+        gap: 1.5rem;
+        margin-top: auto;
+    }
+    
+    .about-containe-2-right-img img {
+        width: calc(50% - 0.75rem); 
+        height: 320px;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 4px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.9),
+        0 0 20px rgba(226, 232, 240, 0.12); 
+    }
+    
+    
+    
+    .booking-package {
+        width: 100%;
+        background-color: var(--warna-primer); 
+        padding: 4rem 5rem;
+        font-family: var(--font-utama);
+        color: var(--teks-utama);
+    }
+    
+    .booking-package-containe {
+        max-width: 1200px;
+        margin: 0 auto;
+        background-color: var(--bg-kartu); 
+        border-radius: 20px;               
+        padding: 2.5rem;                   
+        box-shadow: 0 25px 50px rgba(0, 0, 0, 0.45), 
+        0 0 25px rgba(255, 255, 255, 0.06); 
+        display: grid;
+        grid-template-columns: 1fr 370px;
+        gap: 2.5rem;
+        align-items: start;
+    }
+    
+    
+    /* --- KOLOM KIRI --- */
+    .booking-package-left {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        min-width: 0;
+    }
+    
+    .booking-package-left-title h4 {
+        font-size: 2rem;
+        font-weight: 700;
+        color: var(--warna-primer);
+        line-height: 1.2;
+    }
+    
+    .detail-place {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+        font-size: 0.95rem;
+        color: var(--teks-redup);
+    }
+    
+    .detail-place-rating {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+    }
+    
+    .detail-place-rating .number {
+        font-weight: 700;
+        color: var(--teks-utama);
+    }
+    
+    /* Tombol / Badges Info Paket */
+    .booking-package-left-button {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    
+    .booking-package-left-button button {
+        background-color: var(--bg-kartu);
+        border: 1px solid #E5E7EB;
+        padding: 8px 14px;
+        border-radius: var(--radius-sudut);
+        font-size: 0.85rem;
+        color: var(--teks-utama);
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        cursor: default;
+        box-shadow: 0 1px 2px rgba(0,0,0,0.03);
+    }
+    
+    .booking-package-left-button button i {
+        color: var(--warna-sekunder);
+    }
+    
+    /* Galeri 5 Foto (Milikmu yang sudah pas) */
+    .booking-package-left-img {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr;
+        grid-template-rows: 200px 200px;
+        gap: 12px;
+        width: 100%;
+    }
+    
+    .booking-package-left-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 12px;
+        display: block;
+    }
+    
+    .booking-package-left-img img:first-child {
+        grid-row: span 2;
+    }
+    
+    /* --- TREK ITINERARY --- */
+    .trek-itinerary {
+        margin-top: 1rem;
+        padding-bottom: 1.5rem;
+        border-bottom: 1px solid #E5E7EB;
+    }
+    
+    .trek-itinerary-title h4,
+    .included-excluded-title h4,
+    .certified-guides-title h4 {
+        font-size: 1.25rem;
+        font-weight: 700;
+        color: var(--warna-primer);
+        margin-bottom: 1rem;
+    }
+    
+    .itinerary-item {
+        padding: 12px 0;
+        border-bottom: 1px dashed #E5E7EB;
+    }
+    
+    .itinerary-item:last-child {
+        border-bottom: none;
+    }
+    
+    .itinerary-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+        font-size: 0.95rem;
+    }
+    
+    .itinerary-header p {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    
+    .itinerary-header .dot {
+        width: 9px;
+        height: 9px;
+        background-color: var(--warna-primer);
+        border-radius: 50%;
+        display: inline-block;
+    }
+    
+    .itinerary-time {
+        display: flex;
+        gap: 16px;
+        padding-left: 20px;
+        margin-top: 6px;
+        font-size: 0.85rem;
+        color: var(--teks-redup);
+    }
+    
+    /* --- INCLUDED & EXCLUDED --- */
+    .included-excluded-box {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.25rem;
+    }
+    
+    .included-box {
+        background-color: #F2F7F5;
+        border: 1px solid #D1E2DC;
+        border-radius: 12px;
+        padding: 1.25rem;
+    }
+    
+    .excluded-box {
+        background-color: #FDF4F4;
+        border: 1px solid #F5D6D6;
+        border-radius: 12px;
+        padding: 1.25rem;
+    }
+    
+    .included-box h5 {
+        color: #166534;
+        font-size: 1rem;
+        margin-bottom: 12px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+    
+    .excluded-box h5 {
+        color: #991B1B;
+        font-size: 1rem;
+        margin-bottom: 12px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+    
+    .included-box ul,
+    .excluded-box ul {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        font-size: 0.9rem;
+        color: var(--teks-utama);
+    }
+    
+    .included-box li i {
+        color: #16A34A;
+        margin-right: 8px;
+    }
+    
+    .excluded-box li i {
+        color: #DC2626;
+        margin-right: 8px;
+    }
+    
+    /* --- CERTIFIED GUIDES --- */
+    .certified-guides-list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.25rem;
+    }
+    
+    .guide-card {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        background-color: var(--bg-kartu);
+        border: 1px solid #E5E7EB;
+        padding: 14px;
+        border-radius: 12px;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+    }
+    
+    .guide-card img {
+        width: 52px;
+        height: 52px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+    
+    .guide-detail h5 {
+        font-size: 0.95rem;
+        color: var(--warna-primer);
+        margin-bottom: 2px;
+    }
+    
+    .guide-detail p {
+        font-size: 0.8rem;
+        color: var(--teks-redup);
+    }
+    
+    /* =========================================
+    KOLOM KANAN (Sticky Booking Sidebar)
+    ========================================= */
+    .booking-package-right {
+        background-color: var(--bg-kartu);
+        border: 1px solid #E5E7EB;
+        border-radius: 16px;
+        padding: 1.75rem;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+        position: sticky;
+        top: 24px; /* Menempel di layar saat di-scroll */
+    }
+    
+    .booking-package-right-describe p:first-child {
+        font-size: 0.85rem;
+        color: var(--teks-redup);
+    }
+    
+    .booking-package-right-describe h3 {
+        display: inline-block;
+        font-size: 2rem;
+        font-weight: 800;
+        color: var(--warna-primer);
+        margin-right: 4px;
+    }
+    
+    .booking-package-right-describe p:last-child {
+        font-size: 0.85rem;
+        color: #16A34A;
+        margin-top: 6px;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid #F3F4F6;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+    }
+    
+    /* Form Input Kanan */
+    .Booking-form {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        margin-top: 1.25rem;
+    }
+    
+    .form-group label,
+    .form-input label {
+        display: block;
+        font-size: 0.85rem;
+        font-weight: 600;
+        color: var(--teks-utama);
+        margin-bottom: 6px;
+    }
+    
+    .input-box {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        border: 1px solid #D1D5DB;
+        border-radius: var(--radius-sudut);
+        padding: 10px 12px;
+        background-color: #FFFFFF;
+    }
+    
+    .input-box i {
+        color: var(--teks-redup);
+    }
+    
+    .input-box input,
+    .input-box select {
+        border: none;
+        outline: none;
+        width: 100%;
+        font-size: 0.9rem;
+        color: var(--teks-utama);
+        background: transparent;
+    }
+    
+    .slot-info {
+        display: block;
+        font-size: 0.8rem;
+        color: var(--warna-aksen);
+        margin-top: 5px;
+        font-weight: 500;
+    }
+    
+    /* Tombol Counter Tamu (+ / -) */
+    .guests-box {
+        justify-content: space-between;
+    }
+    
+    .guest-label {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 0.9rem;
+    }
+    
+    .counter-controls {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+    
+    .counter-controls button {
+        width: 28px;
+        height: 28px;
+        border-radius: 50%;
+        border: 1px solid #D1D5DB;
+        background-color: #F9FAFB;
+        cursor: pointer;
+        font-size: 1rem;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: 0.2s;
+    }
+    
+    .counter-controls button:hover {
+        background-color: var(--warna-primer);
+        color: #FFFFFF;
+        border-color: var(--warna-primer);
+    }
+    
+    #guest-count {
+        font-weight: 700;
+        font-size: 0.95rem;
+        min-width: 16px;
+        text-align: center;
+    }
+    
+    /* Price Summary */
+    .booking-describe {
+        margin-top: 1.5rem;
+        padding-top: 1.25rem;
+        border-top: 1px solid #F3F4F6;
+    }
+    
+    .summary-title {
+        font-size: 0.95rem;
+        font-weight: 700;
+        color: var(--warna-primer);
+        margin-bottom: 12px;
+    }
+    
+    .summary-row {
+        display: flex;
+        justify-content: space-between;
+        font-size: 0.85rem;
+        color: var(--teks-redup);
+        margin-bottom: 8px;
+    }
+    
+    .summary-row.discount {
+        color: #16A34A;
+        font-weight: 500;
+    }
+    
+    .summary-total {
+        display: flex;
+        justify-content: space-between;
+        font-size: 1.1rem;
+        font-weight: 800;
+        color: var(--warna-primer);
+        border-top: 1px solid #E5E7EB;
+        padding-top: 12px;
+        margin: 12px 0 16px;
+    }
+    
+    /* Tombol Book Now & WhatsApp */
+    .booking-buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .btn-book {
+        width: 100%;
+        background-color: var(--warna-primer);
+        color: #FFFFFF;
+        border: none;
+        padding: 13px;
+        border-radius: var(--radius-sudut);
+        font-size: 0.95rem;
+        font-weight: 600;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        transition: background-color 0.2s ease;
+    }
+    
+    .btn-book:hover {
+        background-color: var(--warna-aksen);
+    }
+    
+    .btn-wa {
+        width: 100%;
+        background-color: #FFFFFF;
+        color: var(--teks-utama);
+        border: 1px solid #D1D5DB;
+        padding: 12px;
+        border-radius: var(--radius-sudut);
+        font-size: 0.9rem;
+        font-weight: 600;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        transition: 0.2s;
+    }
+    
+    .btn-wa i {
+        color: #16A34A;
+        font-size: 1.1rem;
+    }
+    
+    .btn-wa:hover {
+        background-color: #F0FDF4;
+        border-color: #16A34A;
+    }
+    
+    /* Info Pembatalan & Keamanan */
+    .booking-note {
+        margin-top: 14px;
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        font-size: 0.8rem;
+        color: var(--teks-redup);
+    }
+    
+    .booking-note i {
+        color: #16A34A;
+        margin-right: 6px;
+    }
+    
+    /* --- BAGIAN PRICE SUMMARY KE BAWAH --- */
+    .booking-describe {
+        margin-top: 1.5rem;
+        padding-top: 1.25rem;
+        border-top: 1px solid #E5E7EB;
+    }
+    
+    .summary-title {
+        font-size: 0.95rem;
+        font-weight: 700;
+        color: var(--warna-primer);
+        margin-bottom: 12px;
+    }
+    
+    .summary-row {
+        display: flex;
+        justify-content: space-between;
+        font-size: 0.85rem;
+        color: var(--teks-redup);
+        margin-bottom: 8px;
+    }
+    
+    .summary-row.discount {
+        color: #16A34A;
+        font-weight: 500;
+    }
+    
+    .summary-total {
+        display: flex;
+        justify-content: space-between;
+        font-size: 1.15rem;
+        font-weight: 800;
+        color: var(--warna-primer);
+        border-top: 1px solid #E5E7EB;
+        padding-top: 12px;
+        margin: 12px 0 18px;
+    }
+    
+    .booking-buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .btn-book {
+        width: 100%;
+        background-color: var(--warna-primer);
+        color: #FFFFFF;
+        border: none;
+        padding: 13px;
+        border-radius: 8px;
+        font-size: 0.95rem;
+        font-weight: 600;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+    }
+    
+    .btn-book:hover {
+        background-color: var(--warna-aksen);
+    }
+    
+    .btn-wa {
+        width: 100%;
+        background-color: #FFFFFF;
+        color: var(--teks-utama);
+        border: 1px solid #D1D5DB;
+        padding: 12px;
+        border-radius: 8px;
+        font-size: 0.9rem;
+        font-weight: 600;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+    }
+    
+    .btn-wa i {
+        color: #16A34A;
+        font-size: 1.1rem;
+    }
+    
+    .booking-note {
+        margin-top: 14px;
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        font-size: 0.8rem;
+        color: var(--teks-redup);
+    }
+    
+    .booking-note i {
+        color: #16A34A;
+        margin-right: 6px;
+    }
+    
+    .gallery-contain{
+        width: 100%;
+        margin: 4rem auto;
+        padding-left: 0;
+        background-color: var(--warna-primer);
+    }
+    
+    .gallery-title{
+        text-align: center;
+        
+    }
+    
+    .gallery-title h2{
+        margin-bottom: 1rem;
+        color: #F3E5AB;
+        font-size: 2.4rem;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: bolder;
+    }
+    .gallery-title h2 span{
+        color: white;
+    }
+    
+    .gallery-title p{
+        color: white;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 0.8rem;
+        max-width: 550px;
+        margin: 0 auto 5rem; 
+        text-align: center;
+    }
+    
+    .gallery-img{
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .gallery-img img{
+        border-radius: 1rem;
+        object-fit: cover;
+        width: 15rem;
+        box-shadow: 
+        0 10px 30px rgba(0, 0, 0, 0.45),
+        inset 0 1px 0 rgba(255, 255, 255, 0.12); 
+    }
+    
+    /* Wrapper Utama (Atas Gelombang = Hijau Tua) */
+    .footer-wrapper {
+        background-color:  transparent; 
+        padding-top: 50px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    
+    /* Container Gelombang SVG */
+    .wave-container {
+        display: block;
+        width: 100%;
+        height: 140px;
+        overflow: hidden;
+        line-height: 0;
+        margin-bottom: -2px;
+    }
+    
+    .wave-container svg {
+        display: block;
+        width: 100% !important;
+        height: 140px !important;
+    }
+    
+    
+    /* Area Bawah Gelombang = Putih */
+    .rinjani-footer {
+        background-color: #FFFFFF; 
+        color: #33413E;
+        padding: 30px 8% 25px;
+        font-family: sans-serif;
+    }
+    
+    .footer-grid {
+        display: grid;
+        grid-template-columns: 1.8fr 1fr 1fr 1.3fr;
+        gap: 40px;
+        padding-bottom: 40px;
+        border-bottom: 1px solid #E2E8E6; 
+    }
+    
+    /* Logo Teks .Rinjani */
+    .footer-logo {
+        font-family: 'Literata', serif;
+        font-size: 2rem;
+        font-weight: 700;
+        color: #152623; 
+        text-decoration: none;
+        display: inline-block;
+        margin-bottom: 14px;
+    }
+    
+    .footer-logo span {
+        color: #F37021; 
+    }
+    
+    .brand-col p {
+        font-size: 0.9rem;
+        line-height: 1.6;
+        color: #5A6B67;
+        max-width: 320px;
+    }
+    
+    /* Heading & Link Kolom */
+    .footer-col h4 {
+        color: #152623; 
+        font-size: 0.95rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 18px;
+    }
+    
+    .footer-col ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    
+    .footer-col ul li {
+        margin-bottom: 10px;
+        font-size: 0.9rem;
+        color: #5A6B67;
+    }
+    
+    .footer-col ul li a {
+        color: #5A6B67;
+        text-decoration: none;
+        transition: color 0.2s ease;
+    }
+    
+    .footer-col ul li a:hover {
+        color: #F37021;
+    }
+    
+    .contact-info li i {
+        color: #152623;
+        margin-right: 8px;
+        width: 16px;
+    }
+    
+    /* Baris Copyright & Sosmed */
+    .footer-bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 20px;
+        font-size: 0.85rem;
+        color: #7A8A86;
+    }
+    
+    .footer-socials {
+        display: flex;
+        gap: 15px;
+    }
+    
+    .footer-socials a {
+        color: #152623;
+        font-size: 1rem;
+        transition: color 0.2s ease;
+    }
+    
+    .footer-socials a:hover {
+        color: #F37021;
+    }
+    
